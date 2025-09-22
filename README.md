@@ -148,16 +148,6 @@ Each generated case includes:
 - **Answer**: The correct answer
 - **Reasoning Trace**: Step-by-step logical reasoning
 
-## Dependencies
-
-Key dependencies include:
-- `langchain`: LLM orchestration and prompt management
-- `transformers`: Model handling and tokenization
-- `typer`: CLI framework
-- `pydantic`: Data validation and schemas
-- `scikit-learn`: Evaluation metrics
-- `tqdm`: Progress tracking
-
 ## Approach
 I started this project by forking the original repository and adapting it to the tax domain, but decided implementing it from scratch would be more efficient.
 The basic approach still follows the principles from the MuSR paper, but with some simplifications and adaptations to fit the tax domain.
