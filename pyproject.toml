@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taxmusr"
+version = "0.1.0"
+description = "Python modle for creating synthetic tax law cases requiring multi-step reasoning"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=0.9.9",
+    "huggingface-hub==0.35.0",
+    "langchain>=0.3.27",
+    "langchain-core>=0.3.76",
+    "langchain-openai~=0.3.33",
+    "langfuse>=3.5.0",
+    "numpy~=2.3.3",
+    "tqdm==4.67.1",
+    "transformers==4.56.2",
+    "typer>=0.19.1",
+    "pydantic>=2.11.9",
+    "tokenizers>=0.22.1",
+    "scikit-learn>=1.7.2",
+]
+
+[project.scripts]
+taxmusr = "taxmusr.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["taxmusr*"]
+exclude = ["sara_v3*", "resources*"]
